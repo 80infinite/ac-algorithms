@@ -42,5 +42,37 @@ console.log(result) // -1
 
 function getReadableTime(minutes) {
 	//Your code here
+	//create an if statement to see if the parameter is a number
+	if (typeof minutes !== 'number' || minutes < 0){
+		return -1;
+	} else {
+
+
+	// create an object
+	var timeObject = {};
+	// Divide the number of minutes by 60 to get the number of hours
+	var hours = Math.floor(minutes/60);
+	//Add the day property
+	var day = Math.floor(hours/24);
+		if (day > 0){
+			var remainingHours = hours % 24;
+			timeObject.day = day;
+			timeObject.hour = remainingHours;
+		}else {
+			timeObject.hour = hours;
+		}
+	//Calculate the remainder to have as number of minutes
+	var minutes = (minutes % 60)
+	//Add the value of hours and the value of minutes to our object
+	timeObject.hour = hours;
+	timeObject.minute = minutes;
+	//add the day property
 	
+	var remainingHours = hours % 24;
+	if (day > 0){
+
+	}
+	//return the object
+	return timeObject;
+}
 }
