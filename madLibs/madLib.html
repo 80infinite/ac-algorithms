@@ -8,15 +8,30 @@
 	 	</head>
 	 	
 	 	<body>
+
 			 <h1>Mad Libs</h1>
 			 <ul>
 			  	<li>Noun: <input type="text" id="noun">
 			  	<li>Adjective: <input type="text" id="adjective">
 			  	<li>A Person Name: <input type="text" id="person">
 			 </ul>
-			 <button id="lib-button">Lib it!</button>
+			 <button on click = "libIt()" id="lib-button">Lib it!</button>
 			  
-			 <div id="story"></div>  
+			 <div id="story">
+				 <p>person + "is the" + adjective + "in the" + noun</p></div>  
+			 <script>
+				 var noun=("noun");
+				 var adjective=("adjective");
+				 var name=("person");
+
+				 function libIt(){
+					 append.story();
+
+				 }
+
+
+
+				 </script>
 		</body>
 	</html>
 	
@@ -26,3 +41,12 @@
 3)In the makeMadLib function, retrieve the current values of the form input elements, make a story from them, and output that in the story div (like "Laura really likes pink cucumbers.") -->
 
 <!-- Bonus: Make an object with the list elements as keys and the inputs as values.  -->
+
+<--- add our scripts
+input: value(strings) the user enters
+output: the story(a string with the valves the user entered)
+button clicked
+	call the function makeAMadLib
+		take the values to store them 
+		insert them into our story string
+		append (add into the div id "stpry" -->
